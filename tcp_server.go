@@ -8,7 +8,7 @@ import (
 	"math"
 	"strings"
 	"strconv"
-	"github.com/nunsanity/is105sem03/mycrypt"
+	"github.com/nunsanity/server/mycrypt"
 	 "github.com/nunsanity/funtemp/conv"	
 )
 
@@ -68,7 +68,7 @@ case "Kjevik;SN39040;18.03.2022 01:50;6":
 		if err != nil{
 			log.Fatal(err)
 		}
-		temperatureF := conv.CelsiusToFahrenheit(temperatureC)
+		temperatureF := conv.CelsiusToFarhenheit(temperatureC)
 
 		parts[len(parts)-1] = strconv.FormatFloat(math.Round(temperatureF*100)/100, 'f', 1, 64)
 		newLine := strings.Join(parts, ";")
